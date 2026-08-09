@@ -5,14 +5,13 @@
 
 /* --- BRAND VARIABLES --- */
 :root {
-    --brand-red: #a80c11;     /* Signature Red for Call-to-Actions */
-    --brand-dark: #373742;    /* Dark Accent for Donate/Forms */
+    --brand-red: #a80c11;     
+    --brand-dark: #373742;    
     --text-dark: #1A202C;
     --text-light: #FFFFFF;
     
-    /* Background Dimensions */
-    --bg-main: #F4F6F8;       /* Very soft grey for depth */
-    --bg-card: #FFFFFF;       /* Pure white for floating elements */
+    --bg-main: #F4F6F8;       
+    --bg-card: #FFFFFF;       
     
     --font-heading: 'Cinzel', serif;
     --font-subtitle: 'Philosopher', sans-serif;
@@ -24,11 +23,12 @@
 body { 
     font-family: var(--font-body); 
     color: var(--text-dark); 
-    background-color: var(--bg-main); /* Adds overall site depth */
+    background-color: var(--bg-main); 
     line-height: 1.6; 
 }
 h1 { font-family: var(--font-heading); margin-bottom: 1rem; color: var(--text-light); }
-h2, h3 { font-family: var(--font-subtitle); margin-bottom: 1rem; color: var(--brand-dark); }
+h2 { font-family: var(--font-subtitle); margin-bottom: 1rem; color: var(--brand-dark); }
+h3 { font-family: var(--font-subtitle); color: var(--brand-dark); }
 .section { padding: 6rem 10%; text-align: center; }
 p { margin-bottom: 1rem; color: #4A5568; }
 .text-link { color: var(--brand-red); font-weight: bold; text-decoration: none; }
@@ -39,11 +39,11 @@ p { margin-bottom: 1rem; color: #4A5568; }
     display: flex; justify-content: space-between; align-items: center;
     padding: 1rem 3%; 
     background: rgba(255, 255, 255, 0.95); 
-    backdrop-filter: blur(10px); /* Premium frosted glass effect */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Deep soft shadow */
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
     position: sticky; top: 1.5rem; z-index: 1000;
-    margin: 0 3%; /* Detaches navbar from edges */
-    border-radius: 12px; /* Rounded, not pill */
+    margin: 0 3%; 
+    border-radius: 12px; 
 }
 .logo { height: 50px; }
 .nav-links { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
@@ -58,7 +58,7 @@ p { margin-bottom: 1rem; color: #4A5568; }
 
 /* --- ELEVATED BUTTONS --- */
 .btn-primary, .btn-secondary, .nav-btn-temp {
-    padding: 0.75rem 1.75rem; border: none; border-radius: 8px; /* Elegant rounding */
+    padding: 0.75rem 1.75rem; border: none; border-radius: 8px; 
     font-family: var(--font-body); font-weight: bold; font-size: 1rem;
     text-decoration: none; display: inline-block; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -67,17 +67,14 @@ p { margin-bottom: 1rem; color: #4A5568; }
 }
 .btn-primary:hover, .btn-secondary:hover, .nav-btn-temp:hover { 
     transform: translateY(-3px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Stronger lift effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
 }
-
-/* Color Assignments */
-.btn-primary { background: var(--brand-dark); } /* Donate, Contact Submit */
-.btn-secondary { background: var(--brand-red); } /* Join Us, Vol Submit */
-.nav-btn-temp { background: var(--brand-red); padding: 0.5rem 1.25rem; } /* Camp Asad */
+.btn-primary { background: var(--brand-dark); } 
+.btn-secondary { background: var(--brand-red); } 
+.nav-btn-temp { background: var(--brand-red); padding: 0.5rem 1.25rem; } 
 
 /* --- HERO SECTION --- */
 .hero {
-    /* Adjusted margin to account for floating navbar */
     height: 85vh; margin-top: -6rem; 
     background: linear-gradient(to right, rgba(26, 32, 44, 0.9) 0%, rgba(26, 32, 44, 0.5) 50%, rgba(26, 32, 44, 0.1) 100%), url('hero-background.jpg') center/cover;
     display: flex; align-items: center; justify-content: flex-start; 
@@ -94,22 +91,37 @@ p { margin-bottom: 1rem; color: #4A5568; }
 }
 .about-img {
     width: 45%; border-radius: 12px; 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Heavy shadow for depth */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
 }
 .about-text { width: 55%; }
-
-/* --- FLOATING FORMS & CARDS --- */
-.bg-card {
-    background-color: transparent; /* Relying on the main bg */
+.pillars-title { margin-top: 2rem; margin-bottom: 0.5rem; }
+.pillars-subtitle { font-size: 0.95rem; color: #718096; margin-bottom: 1.5rem; }
+.pillars-list {
+    list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
 }
-.card-container, .custom-form {
+.pillars-list li {
     background: var(--bg-card);
-    padding: 3rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--brand-red);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    border-left: 4px solid var(--brand-red);
+}
+
+/* --- FLOATING FORMS & CARDS (Unified Widths) --- */
+.card-container {
+    background: var(--bg-card);
+    padding: 4rem 3rem;
     border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* Soft, expansive shadow */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05); 
     max-width: 800px; margin: 0 auto;
 }
-.custom-form { display: flex; flex-direction: column; gap: 1.25rem; padding: 2.5rem; max-width: 600px;}
+.custom-form { 
+    display: flex; flex-direction: column; gap: 1.25rem; 
+    max-width: 600px; margin: 2rem auto 0 auto;
+}
 .custom-form input, .custom-form textarea {
     padding: 1.1rem; border: 1px solid #E2E8F0; border-radius: 8px; width: 100%;
     font-family: var(--font-body); font-size: 1rem;
@@ -138,5 +150,6 @@ footer { background: var(--brand-dark); color: var(--text-light); text-align: ce
     .about-container { flex-direction: column; text-align: center; }
     .about-img, .about-text { width: 100%; }
     .hero h1 { font-size: 3rem; }
-    .card-container, .custom-form { padding: 2rem 1.5rem; }
+    .card-container { padding: 2rem 1.5rem; }
+    .pillars-list { grid-template-columns: 1fr; }
 }
