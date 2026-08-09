@@ -39,7 +39,7 @@ p { margin-bottom: 1rem; color: #4A5568; }
 /* --- FLOATING NAVIGATION --- */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 3%; /* Increased vertical padding to give the logo more breathing room */
+    padding: 1rem 3%; 
     background: rgba(255, 255, 255, 0.95); 
     backdrop-filter: blur(10px); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
@@ -47,10 +47,7 @@ p { margin-bottom: 1rem; color: #4A5568; }
     margin: 0 3%; 
     border-radius: 12px; 
 }
-.logo { 
-    height: 50px; 
-    /* Padding removed so flexbox can perfectly center the bounding box vertically */
-}
+.logo { height: 50px; }
 
 .nav-menu {
     display: flex;
@@ -156,7 +153,9 @@ p { margin-bottom: 1rem; color: #4A5568; }
 .team-term { font-weight: bold; color: var(--brand-red); margin-bottom: 3rem; }
 .team-grid {
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns */
+    max-width: 1000px; 
+    margin: 0 auto; 
     gap: 2rem;
 }
 .team-member {
