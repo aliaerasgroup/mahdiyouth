@@ -1,12 +1,18 @@
 // Initialize EmailJS with your Public Key
-// Get this from your EmailJS dashboard: Account -> API Keys
 emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+// Hamburger Menu Logic
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+mobileMenu.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+});
 
 // 1. Handle Volunteer Form
 document.getElementById('volunteer-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Ensure the keys here (name, email, etc.) match the {{variables}} in your EmailJS template
     const templateParams = {
         name: document.getElementById('vol-name').value,
         email: document.getElementById('vol-email').value,
@@ -15,7 +21,6 @@ document.getElementById('volunteer-form').addEventListener('submit', function(e)
         form_type: "Volunteer Application"
     };
 
-    // Replace with your EmailJS Service ID and Template ID
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
         .then(() => {
             alert('Application sent successfully!');
