@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahdi Youth | Community & Empowerment</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <img src="assets/img/logo-main.png" alt="Mahdi Youth Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#instagram">Updates</a></li>
+            <li><a href="#volunteer">Get Involved</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Replace href with the parent org's actual payment link -->
+        <a href="https://parent-org-donations.ca" class="btn-primary" target="_blank">Donate</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Empowering Our Youth</h1>
+            <p>Join Mahdi Youth in building a stronger, connected community.</p>
+            <a href="#volunteer" class="btn-secondary">Join Us</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-container">
+            <img src="assets/img/about-section.jpg" alt="About Mahdi Youth" class="about-img">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>Mahdi Youth is dedicated to fostering spiritual growth, community engagement, and leadership among our youth. Through our programs, events, and volunteer initiatives, we aim to build a deeply connected society.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section id="instagram" class="section bg-light">
+        <h2>Latest from @mahdiyouth</h2>
+        <!-- Paste your free widget embed code (like Elfsight or Curator.io) here -->
+        <div class="elfsight-app-YOUR-WIDGET-ID"></div>
+    </section>
+
+    <!-- Volunteer Sign-Up Form -->
+    <section id="volunteer" class="section">
+        <h2>Get Involved</h2>
+        <p>Sign up to volunteer. Applications are sent directly to our team.</p>
+        <form id="volunteer-form" class="custom-form">
+            <input type="text" id="vol-name" placeholder="Full Name" required>
+            <input type="email" id="vol-email" placeholder="Email Address" required>
+            <input type="tel" id="vol-phone" placeholder="Phone Number" required>
+            <textarea id="vol-interest" placeholder="How would you like to help?" rows="4" required></textarea>
+            <button type="submit" class="btn-primary">Submit Application</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <h2>Contact Us</h2>
+        <p>Email us directly at <a href="mailto:mysociety@cig.ca">mysociety@cig.ca</a> or use the form below.</p>
+        <form id="contact-form" class="custom-form">
+            <input type="text" id="contact-name" placeholder="Name" required>
+            <input type="email" id="contact-email" placeholder="Email" required>
+            <input type="tel" id="contact-phone" placeholder="Phone Number">
+            <textarea id="contact-message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <img src="assets/img/logo-footer.png" alt="Mahdi Youth" class="footer-logo">
+        <p>&copy; 2026 Mahdi Youth. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
