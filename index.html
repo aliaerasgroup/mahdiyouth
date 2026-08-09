@@ -12,16 +12,30 @@
 
     <!-- Floating Navigation -->
     <nav class="navbar">
-        <img src="logo-main.png" alt="Mahdi Youth Logo" class="logo">
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="https://cig.ca/blog/" target="_blank">Blog</a></li>
-            <li><a href="#instagram">Updates</a></li>
-            <li><a href="#volunteer">Get Involved</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="https://campasad.mahdiyouth.ca" target="_blank" class="nav-btn-temp">Camp Asad</a></li>
-        </ul>
-        <a href="https://cigportal.sjz.cloud/donate" class="btn-primary" target="_blank">Donate</a>
+        <a href="#"><img src="logo-main.png" alt="Mahdi Youth Logo" class="logo"></a>
+        
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Nav Links & Buttons Wrapper -->
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="https://cig.ca/blog/" target="_blank">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <!-- Color Swap: Camp Asad is Primary (Dark), Donate is Secondary (Red) -->
+                <a href="https://campasad.mahdiyouth.ca" target="_blank" class="btn-primary">Camp Asad</a>
+                <a href="https://cigportal.sjz.cloud/donate" class="btn-secondary" target="_blank">Donate</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -33,7 +47,7 @@
         </div>
     </header>
 
-    <!-- About Section (Updated) -->
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="about-container">
             <img src="about-section.jpg" alt="About Mahdi Youth" class="about-img">
@@ -54,16 +68,99 @@
         </div>
     </section>
 
+    <!-- Our Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <p>Initiatives designed to support, educate, and elevate our community.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="camp-project.jpg" alt="Camp Asad" class="project-img"></div>
+                    <h3>Camp Asad</h3>
+                    <p>An immersive outdoor retreat fostering spiritual growth, brotherhood, and leadership through nature and teamwork.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="scholarships.jpg" alt="Scholarships" class="project-img"></div>
+                    <h3>Scholarships</h3>
+                    <p>Financial support and academic recognition for dedicated youth pursuing higher education and excellence.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="tutoring.jpg" alt="Tutoring" class="project-img"></div>
+                    <h3>Tutoring</h3>
+                    <p>Peer-led academic support helping students excel in their studies and build confidence in the classroom.</p>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="img-wrapper"><img src="sports.jpg" alt="Sports" class="project-img"></div>
+                    <h3>Sports</h3>
+                    <p>Organized athletic leagues and events promoting physical health, discipline, and community bonds.</p>
+                </div>
+            </div>
+            
+            <p class="projects-note">Please reach out using the contact form below for more information.</p>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p class="team-term">Mahdi Youth Society's Term 2026-2028</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Ashar Syed</h3>
+                    <p>President</p>
+                </div>
+                <div class="team-member">
+                    <h3>Aliya Batool</h3>
+                    <p>Vice President</p>
+                </div>
+                <div class="team-member">
+                    <h3>Zaki Syed</h3>
+                    <p>Secretary</p>
+                </div>
+                <div class="team-member">
+                    <h3>Ali Raza</h3>
+                    <p>Program Director (Brothers)</p>
+                </div>
+                <div class="team-member">
+                    <h3>Kiran Naqvi</h3>
+                    <p>Program Director (Sisters)</p>
+                </div>
+                <div class="team-member">
+                    <h3>Ahmed Raza</h3>
+                    <p>Director of Public Relations (Brothers)</p>
+                </div>
+                <div class="team-member">
+                    <h3>Addan Zahra</h3>
+                    <p>Director of Public Relations (Sisters)</p>
+                </div>
+                <div class="team-member">
+                    <h3>Vacant</h3>
+                    <p>Director of Marketing</p>
+                </div>
+                <div class="team-member">
+                    <h3>Vacant</h3>
+                    <p>Director of Finance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Instagram Feed Section -->
-    <section id="instagram" class="section">
+    <section id="instagram" class="section bg-light">
         <div class="card-container">
             <h2>Latest from @mahdiyouth</h2>
-            <!-- Paste your free widget embed code here -->
             <div class="elfsight-app-YOUR-WIDGET-ID"></div>
         </div>
     </section>
 
-    <!-- Volunteer Sign-Up Form (Fixed Width) -->
+    <!-- Volunteer Sign-Up Form -->
     <section id="volunteer" class="section">
         <div class="card-container">
             <h2>Get Involved</h2>
@@ -78,8 +175,8 @@
         </div>
     </section>
 
-    <!-- Contact Section (Fixed Width) -->
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
         <div class="card-container">
             <h2>Contact Us</h2>
             <p>Email us directly at <a href="mailto:mysociety@cig.ca" class="text-link">mysociety@cig.ca</a> or use the form below.</p>
