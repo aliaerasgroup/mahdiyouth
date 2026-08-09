@@ -34,12 +34,12 @@ h3 { font-family: var(--font-subtitle); color: var(--brand-dark); }
 p { margin-bottom: 1rem; color: #4A5568; }
 .text-link { color: var(--brand-red); font-weight: bold; text-decoration: none; }
 .text-link:hover { text-decoration: underline; }
-.bg-light { background-color: var(--bg-main); } /* Used to alternate section backgrounds */
+.bg-light { background-color: var(--bg-main); } 
 
 /* --- FLOATING NAVIGATION --- */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 0.5rem 3%; /* Adjusted for top/bottom padding */
+    padding: 0.5rem 3%; 
     background: rgba(255, 255, 255, 0.95); 
     backdrop-filter: blur(10px); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
@@ -47,7 +47,7 @@ p { margin-bottom: 1rem; color: #4A5568; }
     margin: 0 3%; 
     border-radius: 12px; 
 }
-.logo { height: 50px; padding: 0.25rem 0; /* Padding inside the logo block */ }
+.logo { height: 50px; padding: 0.25rem 0; }
 
 .nav-menu {
     display: flex;
@@ -119,7 +119,7 @@ p { margin-bottom: 1rem; color: #4A5568; }
     padding: 1rem 1.25rem;
     border-radius: 8px;
     font-weight: 600;
-    color: var(--text-dark); /* Color explicitly changed to match body text */
+    color: var(--text-dark); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     font-size: 0.95rem;
     border-left: 4px solid var(--brand-red);
@@ -137,14 +137,12 @@ p { margin-bottom: 1rem; color: #4A5568; }
     transition: transform 0.3s ease;
 }
 .project-card:hover { transform: translateY(-5px); }
-.img-wrapper {
-    padding: 1.5rem; /* Creates the inset floating look */
-}
+.img-wrapper { padding: 1.5rem; }
 .project-img {
     width: 100%; height: 200px; object-fit: cover;
     border-radius: 8px; 
-    box-shadow: 0 15px 25px rgba(0,0,0,0.15); /* Floating depth effect */
-    transform: translateY(-1rem); /* Pushes image up and out of the card slightly */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15); 
+    transform: translateY(-1rem); 
 }
 .project-card h3 { margin: 0 1.5rem 0.5rem 1.5rem; font-size: 1.5rem; }
 .project-card p { margin: 0 1.5rem; font-size: 0.95rem; }
@@ -154,7 +152,9 @@ p { margin-bottom: 1rem; color: #4A5568; }
 #team { background: #FFFFFF; }
 .team-term { font-weight: bold; color: var(--brand-red); margin-bottom: 3rem; }
 .team-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns on desktop */
+    gap: 2rem;
 }
 .team-member {
     background: var(--bg-main); padding: 2rem; border-radius: 12px;
@@ -216,4 +216,7 @@ footer { background: var(--brand-dark); color: var(--text-light); text-align: ce
     .hero h1 { font-size: 3rem; }
     .card-container { padding: 2rem 1.5rem; }
     .pillars-list { grid-template-columns: 1fr; }
+    
+    /* Makes sure the team grid adapts nicely on smaller screens */
+    .team-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 }
