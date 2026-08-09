@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahdi Youth | Community & Empowerment</title>
+    <!-- Favicon Added Here -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Floating Navigation -->
     <nav class="navbar">
         <img src="logo-main.png" alt="Mahdi Youth Logo" class="logo">
         <ul class="nav-links">
@@ -19,11 +20,10 @@
             <li><a href="#instagram">Updates</a></li>
             <li><a href="#volunteer">Get Involved</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!-- Temporary Camp Asad Link -->
             <li><a href="https://campasad.mahdiyouth.ca" target="_blank" class="nav-btn-temp">Camp Asad</a></li>
         </ul>
-        <!-- Replace href with the parent org's actual payment link -->
-        <a href="https://parent-org-donations.ca" class="btn-primary" target="_blank">Donate</a>
+        <!-- Updated Donate Link -->
+        <a href="https://cigportal.sjz.cloud/donate" class="btn-primary" target="_blank">Donate</a>
     </nav>
 
     <!-- Hero Section -->
@@ -47,10 +47,12 @@
     </section>
 
     <!-- Instagram Feed Section -->
-    <section id="instagram" class="section bg-light">
-        <h2>Latest from @mahdiyouth</h2>
-        <!-- Paste your free widget embed code (like Elfsight or Curator.io) here -->
-        <div class="elfsight-app-YOUR-WIDGET-ID"></div>
+    <section id="instagram" class="section bg-card">
+        <div class="card-container">
+            <h2>Latest from @mahdiyouth</h2>
+            <!-- Paste your free widget embed code here -->
+            <div class="elfsight-app-YOUR-WIDGET-ID"></div>
+        </div>
     </section>
 
     <!-- Volunteer Sign-Up Form -->
@@ -62,21 +64,23 @@
             <input type="email" id="vol-email" placeholder="Email Address" required>
             <input type="tel" id="vol-phone" placeholder="Phone Number" required>
             <textarea id="vol-interest" placeholder="How would you like to help?" rows="4" required></textarea>
-            <button type="submit" class="btn-primary">Submit Application</button>
+            <button type="submit" class="btn-secondary">Submit Application</button>
         </form>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
-        <h2>Contact Us</h2>
-        <p>Email us directly at <a href="mailto:mysociety@cig.ca">mysociety@cig.ca</a> or use the form below.</p>
-        <form id="contact-form" class="custom-form">
-            <input type="text" id="contact-name" placeholder="Name" required>
-            <input type="email" id="contact-email" placeholder="Email" required>
-            <input type="tel" id="contact-phone" placeholder="Phone Number">
-            <textarea id="contact-message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+    <section id="contact" class="section bg-card">
+        <div class="card-container">
+            <h2>Contact Us</h2>
+            <p>Email us directly at <a href="mailto:mysociety@cig.ca" class="text-link">mysociety@cig.ca</a> or use the form below.</p>
+            <form id="contact-form" class="custom-form">
+                <input type="text" id="contact-name" placeholder="Name" required>
+                <input type="email" id="contact-email" placeholder="Email" required>
+                <input type="tel" id="contact-phone" placeholder="Phone Number">
+                <textarea id="contact-message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
