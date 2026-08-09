@@ -1,33 +1,18 @@
 /* --- FONTS --- */
-@font-face {
-    font-family: 'Cinzel';
-    src: url('brand-font-main.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Philosopher';
-    src: url('brand-font-subtitle.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('brand-font-secondary.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face { font-family: 'Cinzel'; src: url('brand-font-main.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Philosopher'; src: url('brand-font-subtitle.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Montserrat'; src: url('brand-font-secondary.ttf') format('truetype'); font-weight: normal; font-style: normal; }
 
 /* --- BRAND VARIABLES --- */
 :root {
-    --primary-color: #2A4365; /* Replace with your primary brand color */
-    --secondary-color: #E2E8F0; 
-    --accent-color: #DD6B20; /* Call-to-action color */
+    --brand-red: #a80c11;     /* Signature Red for Call-to-Actions */
+    --brand-dark: #373742;    /* Dark Accent for Donate/Forms */
     --text-dark: #1A202C;
     --text-light: #FFFFFF;
-    --bg-light: #F7FAFC;
+    
+    /* Background Dimensions */
+    --bg-main: #F4F6F8;       /* Very soft grey for depth */
+    --bg-card: #FFFFFF;       /* Pure white for floating elements */
     
     --font-heading: 'Cinzel', serif;
     --font-subtitle: 'Philosopher', sans-serif;
@@ -39,126 +24,119 @@
 body { 
     font-family: var(--font-body); 
     color: var(--text-dark); 
+    background-color: var(--bg-main); /* Adds overall site depth */
     line-height: 1.6; 
 }
-h1 { 
-    font-family: var(--font-heading); 
-    margin-bottom: 1rem;
-}
-h2, h3 {
-    font-family: var(--font-subtitle);
-    margin-bottom: 1rem;
-}
-.section { padding: 4rem 10%; text-align: center; }
-.bg-light { background-color: var(--bg-light); }
-p { margin-bottom: 1rem; }
+h1 { font-family: var(--font-heading); margin-bottom: 1rem; color: var(--text-light); }
+h2, h3 { font-family: var(--font-subtitle); margin-bottom: 1rem; color: var(--brand-dark); }
+.section { padding: 6rem 10%; text-align: center; }
+p { margin-bottom: 1rem; color: #4A5568; }
+.text-link { color: var(--brand-red); font-weight: bold; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
 
-/* --- NAVIGATION --- */
+/* --- FLOATING NAVIGATION --- */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 5%; background: var(--text-light); box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky; top: 0; z-index: 1000;
+    padding: 1rem 3%; 
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); /* Premium frosted glass effect */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Deep soft shadow */
+    position: sticky; top: 1.5rem; z-index: 1000;
+    margin: 0 3%; /* Detaches navbar from edges */
+    border-radius: 12px; /* Rounded, not pill */
 }
 .logo { height: 50px; }
-.nav-links { list-style: none; display: flex; align-items: center; gap: 2rem; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 2.5rem; }
 .nav-links a { 
-    text-decoration: none; 
-    color: var(--text-dark); 
-    font-family: var(--font-body); 
-    font-weight: bold; 
-    font-size: 1.1rem;
-    display: inline-block;
+    text-decoration: none; color: var(--text-dark); 
+    font-family: var(--font-body); font-weight: 600; font-size: 1rem;
     transition: all 0.3s ease; 
 }
 .nav-links a:not(.nav-btn-temp):hover {
-    color: var(--accent-color);
-    transform: translateY(-2px); 
+    color: var(--brand-red);
 }
 
-/* --- TEMPORARY NAV BUTTON --- */
-.nav-btn-temp {
-    background-color: var(--primary-color);
-    color: var(--text-light) !important;
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
-    font-size: 1rem !important;
-}
-.nav-btn-temp:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    opacity: 0.9;
-}
-
-/* --- MAIN BUTTONS --- */
-.btn-primary, .btn-secondary {
-    padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer;
+/* --- ELEVATED BUTTONS --- */
+.btn-primary, .btn-secondary, .nav-btn-temp {
+    padding: 0.75rem 1.75rem; border: none; border-radius: 8px; /* Elegant rounding */
     font-family: var(--font-body); font-weight: bold; font-size: 1rem;
     text-decoration: none; display: inline-block; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease; 
+    color: var(--text-light) !important;
 }
-.btn-primary:hover, .btn-secondary:hover { 
+.btn-primary:hover, .btn-secondary:hover, .nav-btn-temp:hover { 
     transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
-    opacity: 0.9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Stronger lift effect */
 }
-.btn-primary { background: var(--accent-color); color: var(--text-light); }
-.btn-secondary { background: var(--primary-color); color: var(--text-light); }
+
+/* Color Assignments */
+.btn-primary { background: var(--brand-dark); } /* Donate, Contact Submit */
+.btn-secondary { background: var(--brand-red); } /* Join Us, Vol Submit */
+.nav-btn-temp { background: var(--brand-red); padding: 0.5rem 1.25rem; } /* Camp Asad */
 
 /* --- HERO SECTION --- */
 .hero {
-    height: 80vh; 
-    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%), url('hero-background.jpg') center/cover;
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    padding: 0 10%; 
-    text-align: left; 
-    color: var(--text-light);
+    /* Adjusted margin to account for floating navbar */
+    height: 85vh; margin-top: -6rem; 
+    background: linear-gradient(to right, rgba(26, 32, 44, 0.9) 0%, rgba(26, 32, 44, 0.5) 50%, rgba(26, 32, 44, 0.1) 100%), url('hero-background.jpg') center/cover;
+    display: flex; align-items: center; justify-content: flex-start; 
+    padding: 0 10%; text-align: left; 
 }
-.hero-content {
-    max-width: 600px; 
-}
-.hero h1 { font-size: 4rem; }
-.hero p { 
-    font-family: var(--font-subtitle);
-    font-size: 1.5rem; 
-    margin: 0 0 2rem 0; 
-}
+.hero-content { max-width: 600px; padding-top: 5rem; }
+.hero h1 { font-size: 4.5rem; line-height: 1.1; }
+.hero p { font-family: var(--font-subtitle); font-size: 1.6rem; color: #E2E8F0; margin: 1rem 0 2.5rem 0; }
 
-/* --- ABOUT SECTION --- */
+/* --- DIMENSIONAL ABOUT SECTION --- */
 .about-container {
-    display: flex; gap: 3rem; align-items: center; 
-    max-width: 1000px; margin: 0 auto; text-align: left;
+    display: flex; gap: 4rem; align-items: center; 
+    max-width: 1100px; margin: 0 auto; text-align: left;
 }
 .about-img {
-    width: 50%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 45%; border-radius: 12px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Heavy shadow for depth */
 }
-.about-text { width: 50%; }
+.about-text { width: 55%; }
 
-/* --- FORMS --- */
-.custom-form {
-    max-width: 600px; margin: 2rem auto; display: flex; flex-direction: column; gap: 1rem;
+/* --- FLOATING FORMS & CARDS --- */
+.bg-card {
+    background-color: transparent; /* Relying on the main bg */
 }
+.card-container, .custom-form {
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* Soft, expansive shadow */
+    max-width: 800px; margin: 0 auto;
+}
+.custom-form { display: flex; flex-direction: column; gap: 1.25rem; padding: 2.5rem; max-width: 600px;}
 .custom-form input, .custom-form textarea {
-    padding: 1rem; border: 1px solid #CBD5E0; border-radius: 4px; width: 100%;
+    padding: 1.1rem; border: 1px solid #E2E8F0; border-radius: 8px; width: 100%;
     font-family: var(--font-body); font-size: 1rem;
+    background-color: var(--bg-main);
+    transition: all 0.3s ease;
+}
+.custom-form input:focus, .custom-form textarea:focus {
+    outline: none;
+    border-color: var(--brand-red);
+    box-shadow: 0 0 0 3px rgba(168, 12, 17, 0.1);
 }
 
 /* --- FOOTER --- */
-footer { background: var(--primary-color); color: var(--text-light); text-align: center; padding: 2rem; }
-.footer-logo { height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+footer { background: var(--brand-dark); color: var(--text-light); text-align: center; padding: 3rem 2rem; }
+.footer-logo { height: 50px; margin-bottom: 1.5rem; filter: brightness(0) invert(1); }
 
 /* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-links { display: none; }
+    .navbar { margin: 1rem; }
     .hero {
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-background.jpg') center/cover;
-        justify-content: center;
-        text-align: center;
+        background: linear-gradient(rgba(26, 32, 44, 0.8), rgba(26, 32, 44, 0.8)), url('hero-background.jpg') center/cover;
+        justify-content: center; text-align: center; padding: 0 5%;
     }
     .hero-content { max-width: 100%; }
-    .hero p { margin: 0 auto 2rem auto; }
     .about-container { flex-direction: column; text-align: center; }
     .about-img, .about-text { width: 100%; }
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 3rem; }
+    .card-container, .custom-form { padding: 2rem 1.5rem; }
 }
