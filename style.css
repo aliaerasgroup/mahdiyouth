@@ -50,8 +50,8 @@ p { margin-bottom: 1rem; color: #4A5568; }
 .logo { 
     height: 60px; 
     display: block; /* Removes inline image baseline gap underneath */
-    padding-top: 20px; /* Equal manual padding top & bottom */
-    padding-bottom: 20px;
+    padding-top: 10px; /* Equal manual padding top & bottom */
+    padding-bottom: 10px;
 }
 
 .nav-menu {
