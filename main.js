@@ -1,5 +1,5 @@
 // Initialize EmailJS with your Public Key
-emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+emailjs.init("j8P3bzeNXKRO57k18");
 
 // Hamburger Menu Logic
 const mobileMenu = document.getElementById('mobile-menu');
@@ -21,7 +21,7 @@ document.getElementById('volunteer-form').addEventListener('submit', function(e)
         form_type: "Volunteer Application"
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_97zm0ea', 'template_yclrfca', templateParams)
         .then(() => {
             alert('Application sent successfully!');
             this.reset();
@@ -43,7 +43,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         form_type: "General Contact"
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_97zm0ea', 'template_yclrfca', templateParams)
         .then(() => {
             alert('Message sent successfully!');
             this.reset();
